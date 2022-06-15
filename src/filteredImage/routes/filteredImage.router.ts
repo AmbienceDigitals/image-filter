@@ -22,27 +22,26 @@ const router: Router = Router();
 
 router.get('/filteredimage/', 
 async (req: Request, res: Response) => {
-    let {image_url} = req.query;
-
-    // checking if image query exists
+    const {image_url} = req.query;
+// using try/catch for error handling
+    try {
+            // checking if image query exists
     if (!image_url) {
         return res.status(400).send('no image url detected');
     }
 
     // save image_url to a variable
-    let filteredPath = await filterImageFromURL(image_url)
+    const filteredPath = await filterImageFromURL(image_url)
 
     // using res.sendfile to return the file obtained from the filteredpath
-    return res.sendFile(filteredPath, (err) => {
-        // if the filteredpath is broken or something is wrong, it should return http 500
-            if (err) {
-                res.status(500).send("image link is broken")
-            }
-            else {
-                res.status(200)
+    return res.status(200).sendFile(filteredPath, () => {
+        // delete file once thw operation is successfully completed
                 deleteLocalFiles([filteredPath]);
-            }
     })
+    } catch (error) {
+        return res.status(500).send("There is an error with the link provided")
+    }
+
 })
 
 
