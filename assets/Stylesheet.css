@@ -1,0 +1,133 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: row;
+}
+
+.nav > p {
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.nav > .links {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.links > p {
+    margin-left: 30px;
+}
+
+a {
+    text-decoration:none !important;
+    color: inherit;
+}
+
+#home {
+    background-image: url(ok.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height:auto;
+    color: white;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+
+.left{
+    margin-top: 40px;
+    width: 100%;
+}
+
+.left > h1 {
+    margin: 0;
+    font-size: 2.7em;
+    font-weight: bold;
+}
+
+.left >p {
+    font-size: 1em;
+    line-height: 2;
+}
+
+#services {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon > h3{
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.img {
+    background-color: #F9F5F4;
+    margin: auto;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin-bottom: 0 !important;
+}
+
+.img > img {
+    height: 40px;
+    margin: 15px;
+}
+
+#client {
+    background-color: lightgray;
+}
+
+#client > h3 {
+    padding: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+.testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.test {
+    background-color: white;
+    margin: auto;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 0 !important;
+}
+
+.test > img {
+    height: 75px;
+    margin: 2.5px;
+}
+
+.client {
+    width: 25%;
+    margin: auto;
+}
+
+.client > p {
+    text-align: center;
+}
+
+footer {
+    background-color: gray;
+    padding: 10px;
+}
+
+footer > p {
+    margin-left: 50px;
+    color: white;
+}
